@@ -33,7 +33,14 @@ public class GeoBot {
     
     public static void main(String[] args) {
         
-
+        System.out.println("Input your problem");
+	Scanner input = new Scanner(System.in);
+	String in = input.nextLine();
+	String[] procArray = new String[in.length()];
+	procArray = in.split(" ");
+	List<String> inputList = Arrays.asList(procArray);
+	System.out.println(inputList);
+            
         GeoStatement Given = new GeoStatement("Given", null);
         GeoStatement[] givenarray = new GeoStatement[]{Given};
 
@@ -47,23 +54,7 @@ public class GeoBot {
         Midpoint mid = new Midpoint(B, AC, givenarray);
         
         
-        /*
-        * @Paci I'll start by copy-pasting in my processing code so you can see it
-        * It's WIP so the only part that's complete is the cutting up of the string
-        */
-        System.out.println("Input an operatixon");
-        Scanner input = new Scanner(System.in);
-        String in = input.nextLine();
-        in.replaceAll("\\s", " ");
-        int procLength = in.length();
-        String[] procArray = new String[procLength];
-        procArray = in.split(" ");
-        in.replaceAll("\\s", "");
-        int mainLength = in.length();
-        String[] mainArray = new String[mainLength];
-        for(int j = 0; j < mainLength; j++){
-           mainArray[j] = procArray[j];
-           
+        
         }
         
         }
